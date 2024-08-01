@@ -1,4 +1,4 @@
-$vms = Get-Content "/Users/dinesh/snap/list.csv"                                                                        
+$vms = Get-Content "/Users/dinesh/snap/list.csv"   # Replace the file path with your own file path name.                                                                     
 $vm = get-vm $vms  
 #$vm | Remove-snapshot
 Get-VM $vm | Get-Snapshot | % { Remove-Snapshot $_ -Confirm:$false }   
